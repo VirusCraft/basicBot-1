@@ -87,7 +87,7 @@
     "emojilist": "/me Emojis: %%LINK%%",
     "notinwaitlist": "@%%NAME%%, você não está na lista de espera.",
     "eta": "/me @%%NAME%% você tocará em aproximadamente %%TIME%%.",
-    "facebook": "/me Curta nossa página no Facebook: %%LINK%%",
+    "facebook": "/me Seja um membro do nosso grupo Facebook: %%LINK%%",
     "starterhelp": "/me Essa imagem o ajudará a usar e entender o plug.dj: %%LINK%%",
     "roulettejoin": "/me @%%NAME%% entrou na roleta! (Use !leave para sair.)",
     "jointime": "/me [@%%NAMEFROM%%] @%%USERNAME%% está na sala há %%TIME%%.",
