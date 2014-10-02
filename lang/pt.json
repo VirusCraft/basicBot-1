@@ -65,7 +65,7 @@
     "lockguard": "lockguard",
     "usercommands": "comandos de usuário",
     "motd": "MotD",
-    "welcomemsg": "mensagem de boas vindas",
+    "welcomemsg": "mensagem de boas-vindas",
     "songstats": "estatísticas de música",
     "etarestriction": "restrição de eta",
     "activeusersintime": "/me [@%%NAME%%] %%AMOUNT%% usuários estiveram ativos nos últimos %%TIME%% minutos.",
