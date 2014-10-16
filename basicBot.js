@@ -217,8 +217,8 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            intervalMessages: 2,
-            messageInterval: 6,
+            intervalMessages: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "Faça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
+            messageInterval: 5,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
@@ -262,7 +262,7 @@
             messages: {
                 from: [],
                 to: [],
-                message: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "Faça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"]
+                message: []
             },
             queue: {
                 id: [],
