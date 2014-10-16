@@ -218,7 +218,7 @@
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
             intervalMessages: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "Faça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
-            messageInterval: 5,
+            messageInterval: 0,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
