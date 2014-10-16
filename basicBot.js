@@ -205,9 +205,9 @@
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
-            motdEnabled: true,
-            motdInterval: 7,
-            motd: "Join our Facebook group: https://www.facebook.com/groups/EDTentertainment",
+            motdEnabled: false,
+            motdInterval: 5,
+            motd: "Temporary Message of the Day",
             filterChat: false,
             etaRestriction: false,
             welcome: false,
@@ -217,8 +217,8 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            intervalMessages: [],
-            messageInterval: 5,
+            intervalMessages: 2,
+            messageInterval: 6,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
@@ -262,7 +262,7 @@
             messages: {
                 from: [],
                 to: [],
-                message: []
+                message: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "Faça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"]
             },
             queue: {
                 id: [],
