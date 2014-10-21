@@ -1987,7 +1987,12 @@
 
                             if (chat.message.length === cmd.length) {
                                 API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
-                                basicBot.roomUtilities.booth.lockBooth();
+                                //basicBot.roomUtilities.booth.lockBooth();   // Removido por bug
+                                var toggle = $(".cycle-toggle");              // Verifica o estado do cycle antes de ativalo
+                                if (toggle.hasClass("disabled")) {            // ativa se estiver desativado
+                                    basicBot.roomUtilities.changeDJCycle();
+                                }
+                                basicBot.
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
                                     basicBot.room.skippable = false;
@@ -1998,7 +2003,8 @@
                                         basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
                                         basicBot.room.queueable = true;
                                         setTimeout(function () {
-                                            basicBot.roomUtilities.booth.unlockBooth();
+                                            //basicBot.roomUtilities.booth.unlockBooth();    // Removido por bug
+                                            basicBot.roomUtilities.changeDJCycle();          // Desativa o cycle
                                         }, 1000);
                                     }, 1500, id);
                                 }, 1000, id);
@@ -2016,7 +2022,11 @@
                             }
                             if (validReason) {
                                 API.sendChat(subChat(basicBot.chat.usedlockskip, {name: chat.un}));
-                                basicBot.roomUtilities.booth.lockBooth();
+                                //basicBot.roomUtilities.booth.lockBooth();   // Removido por bug
+                                var toggle = $(".cycle-toggle");              // Verifica o estado do cycle antes de ativalo
+                                if (toggle.hasClass("disabled")) {            // ativa se estiver desativado
+                                    basicBot.roomUtilities.changeDJCycle();
+                                }
                                 setTimeout(function (id) {
                                     API.moderateForceSkip();
                                     basicBot.room.skippable = false;
@@ -2028,7 +2038,8 @@
                                         basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
                                         basicBot.room.queueable = true;
                                         setTimeout(function () {
-                                            basicBot.roomUtilities.booth.unlockBooth();
+                                            //basicBot.roomUtilities.booth.unlockBooth();    // Removido por bug
+                                            basicBot.roomUtilities.changeDJCycle();          // Desativa o cycle
                                         }, 1000);
                                     }, 1500, id);
                                 }, 1000, id);
