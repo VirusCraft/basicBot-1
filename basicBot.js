@@ -1990,10 +1990,9 @@
                                 //basicBot.roomUtilities.booth.lockBooth();   // Removido por bug
                                 var toggle = $(".cycle-toggle");              // Verifica o estado do cycle antes de ativalo
                                 if (toggle.hasClass("disabled")) {            // ativa se estiver desativado
-                                    basicBot.roomUtilities.changeDJCycle();
+                                    toggle.click();
                                 }
-                                basicBot.
-                                setTimeout(function (id) {
+                                basicBot.setTimeout(function (id) {
                                     API.moderateForceSkip();
                                     basicBot.room.skippable = false;
                                     setTimeout(function () {
