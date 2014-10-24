@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.1",
+        version: "2.1.2",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -178,7 +178,7 @@
         settings: {
             botName: "EDT-ChatBot",
             language: "english",
-            chatLink: "https://rawgit.com/diegodepira/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/GaabrieeLp/basicBot/master/lang/en.json",
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 90,
@@ -217,8 +217,8 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            intervalMessages: [],
-            messageInterval: 5,
+            intervalMessages: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "Faça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
+            messageInterval: 1,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
@@ -847,7 +847,7 @@
                 basicBot.room.autoskipTimer = setTimeout(function () {
                     console.log("Skipping track.");
                     API.moderateForceSkip();
-                }, remaining + 1000);
+                }, remaining + 3000);
             }
             storeToStorage();
 
@@ -2227,6 +2227,13 @@
 
                             }
                             else if (time > 30) {
+                                API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
+                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
+                                setTimeout(function (id) {
+                                    API.moderateUnmuteUser(id);
+                                }, time * 60 * 1000, user.id);
+                            }
+                            else if (time > 15) {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.MEDIUM);
                                 API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
                                 setTimeout(function (id) {
