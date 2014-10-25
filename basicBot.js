@@ -217,7 +217,7 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            dayMessage: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "\nFaça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
+            dayMessage: "JOIN TO OUR FACEBOOK GROUP: http://goo.gl/Lwj3i3 \r\nSUBSCRIBE TO OUR CHANNEL: http://goo.gl/wREyDT \r\nLIKE OUR FAN PAGE: http://goo.gl/AheXpr', //["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment \nFaça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
             dayMessageInterval: 30,
             intervalMessages: [],
             messageInterval: 0,
@@ -703,13 +703,11 @@
                 }
                 return list;
             },
-            dayMessageFunc: function () { 
-                alert('chamou');
+            dayMessageFunc: function () {
                 setInterval(function () {
-                    alert('escreveu');
                     return API.sendChat('/me ' + basicBot.settings.dayMessage);
                     basicBot.roomUtilities.dayMessageFunc();
-                }, 10000);
+                }, basicBot.settings.dayMessageInterval * 60 * 1000 );
             }
         },
         eventChat: function (chat) {
