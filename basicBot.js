@@ -702,6 +702,12 @@
                     });
                 }
                 return list;
+            },
+            dayMessageFunc: function () { 
+                setTimeout(function () {
+                    return API.sendChat('/me ' + basicBot.settings.dayMessage);
+                    dayMessageFunc();
+                }, basicBot.settings.dayMessageInterval * 1000);
             }
         },
         eventChat: function (chat) {
@@ -1172,6 +1178,7 @@
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
+            basicBot.roomUtilities.dayMessageFunc();
             loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },
         commands: {
