@@ -2081,7 +2081,7 @@
                         var msg = chat.message;
                         var pos = msg.substring(cmd.length + 1);
                         if (!isNaN(pos)) {
-                            if (trim(pos) <> '') {
+                            if (pos.trim() != '') {
                                 basicBot.settings.dayMessageInterval = pos;
                             }
                             return API.sendChat(subChat(basicBot.chat.daymessageinterval, {name: chat.un, time: basicBot.settings.dayMessageInterval}));
