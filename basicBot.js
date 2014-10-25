@@ -2111,7 +2111,29 @@
                     }
                 }
             },
-
+            
+            clearAllSettingsCommand: {
+                command: 'clearallsettings',
+                rank: 'manager',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        var pos = msg.substring(cmd.length + 1);
+                        if (pos.trim() == 'true') {
+                            localStorage.removeItem("basicBotsettings");
+                            localStorage.removeItem("basicBotRoom");
+                            
+                            return API.sendChat(subChat(basicBot.chat.clearallsettings, {name: chat.un));
+                            API.sendChat("!reload");
+                        }
+                        else return API.sendChat(subChat(basicBot.chat.clearallsettingsfail, {name: chat.un}));
+                    }
+                }
+            },
+            
             locktimerCommand: {
                 command: 'locktimer',
                 rank: 'manager',
