@@ -707,7 +707,7 @@
                 setInterval(function () {
                     return API.sendChat('/me ' + basicBot.settings.dayMessage);
                     basicBot.roomUtilities.dayMessageFunc();
-                }, basicBot.settings.dayMessageInterval * 1000 );
+                }, basicBot.settings.dayMessageInterval * 60 * 1000 );
             }
         },
         eventChat: function (chat) {
