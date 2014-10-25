@@ -2126,7 +2126,7 @@
                             localStorage.removeItem("basicBotsettings");
                             localStorage.removeItem("basicBotRoom");
                             
-                            return API.sendChat(subChat(basicBot.chat.clearallsettings, {name: chat.un));
+                            return API.sendChat(subChat(basicBot.chat.clearallsettings, {name: chat.un}));
                             API.sendChat("!reload");
                         }
                         else return API.sendChat(subChat(basicBot.chat.clearallsettingsfail, {name: chat.un}));
