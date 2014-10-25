@@ -98,6 +98,8 @@
     "songlink": "/me [@%%NAME%%] Link para a música atual: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% usou 'lockskip'.]",
     "lockskippos": "/me [@%%NAME%%] Lockskip está agora movendo para a posição %%POSITION%%.",
+    "daymessageinterval": "/me [@%%NAME%%] Mensagem será exibida a cada %%TIME%% minuto(s).",
+    "invalidintervalspecified": "/me [@%%NAME%%] Interalo inválido.",
     "lockguardtime": "/me [@%%NAME%%] A proteção de travamento agora é %%TIME%% minuto(s).",
     "maxlengthtime": "/me [@%%NAME%%] A duração máxima de tempo agora é %%TIME%% minutos.",
     "motdset": "/me Mensagem do Dia:  %%MSG%%",
