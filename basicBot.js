@@ -2079,10 +2079,12 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
+                        alert(msg);
                         var pos = msg.substring(cmd.length + 1);
+                        alert(pos);
                         if (!isNaN(pos)) {
                             basicBot.settings.dayMessageInterval = pos;
-                            return API.sendChat(subChat(basicBot.chat.daymessageinterval, {name: chat.un, time: basicBot.settings.daymessageinterval}));
+                            return API.sendChat(subChat(basicBot.chat.daymessageinterval, {name: chat.un, time: basicBot.settings.dayMessageInterval}));
                         }
                         else return API.sendChat(subChat(basicBot.chat.invalidintervalspecified, {name: chat.un}));
                     }
