@@ -217,7 +217,7 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            dayMessage: "JOIN TO OUR FACEBOOK GROUP: http://goo.gl/Lwj3i3 \r\nSUBSCRIBE TO OUR CHANNEL: http://goo.gl/wREyDT \r\nLIKE OUR FAN PAGE: http://goo.gl/AheXpr', //["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment \nFaça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
+            dayMessage: ["JOIN TO OUR FACEBOOK GROUP: http://goo.gl/Lwj3i3 \r\nSUBSCRIBE TO OUR CHANNEL: http://goo.gl/wREyDT \r\nLIKE OUR FAN PAGE: http://goo.gl/AheXpr"], //["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment \nFaça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
             dayMessageInterval: 30,
             intervalMessages: [],
             messageInterval: 0,
