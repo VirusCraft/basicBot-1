@@ -99,6 +99,8 @@
     "songlink": "/me [@%%NAME%%] Link to current song: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% used lockskip.]",
     "lockskippos": "/me [@%%NAME%%] Lockskip will now move the dj to position %%POSITION%%.",
+    "daymessageinterval": "/me [@%%NAME%%] Message will be displayed every %%TIME%% minute(s).",
+    "invalidintervalspecified": "/me [@%%NAME%%] Invalid interval.",
     "lockguardtime": "/me [@%%NAME%%] The lockguard is set to %%TIME%% minute(s).",
     "maxlengthtime": "/me [@%%NAME%%] The maximum song duration is set to %%TIME%% minutes.",
     "motdset": "/me MotD set to:  %%MSG%%",
