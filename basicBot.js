@@ -217,7 +217,7 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            dayMessage: ["JOIN TO OUR FACEBOOK GROUP: http://goo.gl/Lwj3i3 <br> SUBSCRIBE TO OUR CHANNEL: http://goo.gl/wREyDT <br> LIKE OUR FAN PAGE: http://goo.gl/AheXpr"], 
+            dayMessage: "Join to our Facebook group: http://goo.gl/Lwj3i3 - Subscribe to our channel: http://goo.gl/wREyDT - Like our fan page: http://goo.gl/AheXpr", 
             dayMessageInterval: 30,
             intervalMessages: [],
             messageInterval: 0,
@@ -2105,7 +2105,7 @@
                                 basicBot.settings.dayMessageInterval = pos;
                             }
                             return API.sendChat(subChat(basicBot.chat.daymessageinterval, {name: chat.un, time: basicBot.settings.dayMessageInterval}));
-                            setTimeout(function(){basicBot.roomUtilities.dayMessageFunc();}, basicBot.settings.dayMessageInterval * 1000);
+                            basicBot.roomUtilities.dayMessageFunc();
                         }
                         else return API.sendChat(subChat(basicBot.chat.invalidintervalspecified, {name: chat.un}));
                     }
