@@ -706,7 +706,7 @@
             dayMessageFunc: function () { 
                 setTimeout(function () {
                     return API.sendChat('/me ' + basicBot.settings.dayMessage);
-                    dayMessageFunc();
+                    basicBot.roomUtilities.dayMessageFunc();
                 }, basicBot.settings.dayMessageInterval * 1000);
             }
         },
