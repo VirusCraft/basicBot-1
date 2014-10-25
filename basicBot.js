@@ -704,10 +704,12 @@
                 return list;
             },
             dayMessageFunc: function () { 
-                setTimeout(function () {
+                alert('chamou');
+                setInterval(function () {
+                    alert('escreveu');
                     return API.sendChat('/me ' + basicBot.settings.dayMessage);
                     basicBot.roomUtilities.dayMessageFunc();
-                }, 1000);
+                }, 10000);
             }
         },
         eventChat: function (chat) {
