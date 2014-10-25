@@ -18,6 +18,8 @@ Manager
 |!refresh | | refreshes the browser of whoever runs the bot |
 |!usercmdcd | X | set the cooldown on commands by grey users |
 |!usercommands | | toggle user commands |
+|!daymessageinterval | X | set the interval of the message with the fan pages |
+|!clearallsettings | true | Clear all settings of the room! P.S: After execute the command, refresh the page, execute the bot, type !kill and open the bot again. |
 
 Bouncer+
 --------
@@ -105,3 +107,4 @@ User
 |!theme | | links to the room's theme (if set in the settings) |
 |!website | | links to the room's website (if set in the settings) |
 |!youtube | | links to the room's youtube page (if set in the settings) |
+|!daymessage | | shows the links for fan pages (this will be sent automatically with the interval time) |
