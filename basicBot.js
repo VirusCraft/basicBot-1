@@ -217,7 +217,7 @@
             fbLink: "https://www.facebook.com/groups/EDTentertainment",
             youtubeLink: "https://www.youtube.com/user/EDTentertainment",
             website: null,
-            dayMessage: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "Faça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
+            dayMessage: ["Join our Facebook group: https://www.facebook.com/groups/EDTentertainment", "\nFaça parte do nosso grupo no Facebook: https://www.facebook.com/groups/EDTentertainment"],
             dayMessageInterval: 30,
             intervalMessages: [],
             messageInterval: 0,
@@ -2073,6 +2073,19 @@
                             return API.sendChat(subChat(basicBot.chat.lockskippos, {name: chat.un, position: basicBot.settings.lockskipPosition}));
                         }
                         else return API.sendChat(subChat(basicBot.chat.invalidpositionspecified, {name: chat.un}));
+                    }
+                }
+            },
+            
+            dayMessageCommand: {
+                command: 'daymessage',
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        return API.sendChat('/me ' + basicBot.settings.dayMessage);
                     }
                 }
             },
