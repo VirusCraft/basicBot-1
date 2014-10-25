@@ -2092,6 +2092,7 @@
                                 basicBot.settings.dayMessageInterval = pos;
                             }
                             return API.sendChat(subChat(basicBot.chat.daymessageinterval, {name: chat.un, time: basicBot.settings.dayMessageInterval}));
+                            setTimeout(function(){basicBot.roomUtilities.dayMessageFunc();}, basicBot.settings.dayMessageInterval * 1000);
                         }
                         else return API.sendChat(subChat(basicBot.chat.invalidintervalspecified, {name: chat.un}));
                     }
