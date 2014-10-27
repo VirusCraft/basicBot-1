@@ -704,10 +704,11 @@
                 return list;
             },
             dayMessageFunc: function () {
-                setInterval(function () {
-                    return API.sendChat('/me ' + basicBot.settings.dayMessage);
-                    basicBot.roomUtilities.dayMessageFunc();
-                }, basicBot.settings.dayMessageInterval * 60 * 1000 );
+                //comentado por enquanto
+                //setInterval(function () {
+                //    return API.sendChat('/me ' + basicBot.settings.dayMessage);
+                //    basicBot.roomUtilities.dayMessageFunc();
+                //}, basicBot.settings.dayMessageInterval * 60 * 1000 );
             }
         },
         eventChat: function (chat) {
